@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="signup-container flex flex-col items-center justify-center h-screen bg-gray-100">
+        <h1 class="text-3xl font-bold mb-8">Sign Up</h1>
+        <div class="w-full max-w-xs">
+            <input type="text" id="username" class="w-full mb-4 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Username">
+            <input type="email" id="email" class="w-full mb-4 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email">
+            <input type="password" id="password" class="w-full mb-4 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Password">
+            <input type="password" id="confirmPassword" class="w-full mb-4 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Confirm Password">
+            <button id="signup-button" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none">Sign Up</button>
+            <button id="login-button" class="w-full bg-gray-400 text-white py-2 mt-4 rounded-lg hover:bg-gray-500 focus:outline-none">Already have an account? Login</button>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+
+</html>

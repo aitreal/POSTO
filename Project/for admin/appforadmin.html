@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSTO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf7e6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #ff6b6b;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        
+        .box-icon {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .button-container {
+            margin: 20px 0;
+        }
+        
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 150px;
+            padding: 15px;
+            margin: 20px auto;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            border-radius: 15px;
+            text-decoration: none;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .button:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .upload-button {
+            background-color: #f9d77e;
+            margin-bottom: 40px;
+        }
+        
+        .dashboard-button {
+            background-color: #88c3e6;
+        }
+        
+        .button img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        
+        .button span {
+            font-size: 20px;
+        }
+        /* Media Queries สำหรับหน้าจอขนาดเล็ก */
+        
+        @media only screen and (max-width: 600px) {
+            .header {
+                font-size: 20px;
+            }
+            .box-icon {
+                width: 100px;
+                height: 100px;
+            }
+            .button {
+                width: 200px;
+                height: 120px;
+            }
+            .button img {
+                width: 60px;
+                height: 60px;
+            }
+            .button span {
+                font-size: 18px;
+            }
+        }
+        /* ปุ่มกลับไปหน้า login */
+        
+        .back-button {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: #f2d2d0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .back-button img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .back-button:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">POSTO</div>
+    <div class="container">
+        <img src="admin-menu.png" alt="Box Icon" class="box-icon">
+        <h2>Select Option</h2>
+        <div class="button-container">
+            <a href="upload.html" class="button upload-button">
+                <img src="upload.png" alt="Upload Icon">
+                <span>Upload Parcel Image</span>
+            </a>
+            <a href="#dashboard" class="button dashboard-button">
+                <img src="dash.png" alt="Dashboard Icon">
+                <span>View Dashboard</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ปุ่มกลับไปหน้า login -->
+    <a href="loginadmin.html" class="back-button">
+        <img src="undo.png" alt="Back">
+    </a>
+
+</body>
+
+</html>

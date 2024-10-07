@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSTO Upload Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf7e6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #ff6b6b;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .header img {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 10px;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .upload-icon {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+        
+        .file-input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+        
+        .file-input-container input[type="file"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px 0 0 10px;
+            text-align: left;
+            font-size: 16px;
+            box-sizing: border-box;
+            /* รวม padding ในขนาดของกรอบ */
+        }
+        
+        .file-input-container button {
+            width: 80px;
+            background-color: #f9d77e;
+            border: 10px solid #f9d77e;
+            /* เพิ่มกรอบ */
+            border-radius: 0 10px 10px 0;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .file-input-container button img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .upload-button {
+            background-color: #4b4b7e;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .upload-button:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cancel-link {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            /* เปลี่ยนเป็นมือชี้เมื่ออยู่เหนือ */
+        }
+        
+        .back-button {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: #f2d2d0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .back-button img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .back-button:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="admin-menu.png" alt="Icon"> POSTO
+    </div>
+
+    <div class="container">
+        <h2>Upload Parcel Image</h2>
+        <img src="upload.png" alt="Upload Icon" class="upload-icon">
+        <div class="file-input-container">
+            <input type="file" id="file-upload">
+            <button>
+                <img src="upload4.png" alt="Upload">
+            </button>
+        </div>
+        <button class="upload-button">Upload</button>
+        <a href="#" class="cancel-link" id="cancel-button">cancel</a>
+    </div>
+
+    <a href="appforadmin.html" class="back-button">
+        <img src="undo.png" alt="Back">
+    </a>
+
+    <script>
+        // เพิ่ม event listener ให้กับปุ่ม Cancel
+        document.getElementById('cancel-button').addEventListener('click', function(event) {
+            event.preventDefault(); // ป้องกันการรีเฟรชหน้า
+            document.getElementById('file-upload').value = ''; // ลบไฟล์ที่เลือก
+        });
+    </script>
+</body>
+
+</html>
